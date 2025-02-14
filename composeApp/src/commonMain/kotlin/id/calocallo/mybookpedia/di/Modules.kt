@@ -5,6 +5,7 @@ import id.calocallo.mybookpedia.book.data.network.RemoteBookDataSource
 import id.calocallo.mybookpedia.book.data.repository.DefaultBookRepository
 import id.calocallo.mybookpedia.book.domain.BookRepository
 import id.calocallo.mybookpedia.book.presentation.book_list.BookListViewModel
+import id.calocallo.mybookpedia.book.presentation.book_list.SelectedBookViewModel
 import id.calocallo.mybookpedia.core.data.HttpClientFactory
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
@@ -20,4 +21,5 @@ val sharedModule = module {
     singleOf(::DefaultBookRepository).bind<BookRepository>()
 
     viewModelOf(::BookListViewModel)
+    viewModelOf(::SelectedBookViewModel)
 }
