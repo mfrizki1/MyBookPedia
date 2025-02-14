@@ -1,5 +1,10 @@
 package id.calocallo.mybookpedia
 
 import androidx.compose.ui.window.ComposeUIViewController
+import id.calocallo.mybookpedia.di.initKoin
 
-fun MainViewController() = ComposeUIViewController { App() }
+fun MainViewController() = ComposeUIViewController(
+    configure = {
+        initKoin()
+    }
+) { App() }
